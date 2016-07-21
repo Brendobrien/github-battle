@@ -52,7 +52,6 @@ var helpers = {
         })
     },
     battle: function (players) {
-        console.log(players);
         var playerOneData = getPlayersData(players[0]);
         var playerTwoData = getPlayersData(players[1]);
         return axios.all([playerOneData, playerTwoData])

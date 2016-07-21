@@ -7,7 +7,6 @@ var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
   entry: [
-    'webpack-dev-server/client?https://0.0.0.0:8080',
     './app/index.js'
   ],
   output: {
@@ -16,7 +15,8 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, exclude: /node_modules/, loader: "babel-loader"}
+      {test: /\.js$/, include: __dirname + '/app', loader: "babel-loader"},
+      { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
   plugins: [HTMLWebpackPluginConfig]
