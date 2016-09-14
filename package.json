@@ -6,7 +6,7 @@
   "scripts": {
     "production": "webpack -p",
     "start": "webpack-dev-server",
-    "c9": "webpack-dev-server --host $IP --port $PORT",
+    "c9": "webpack-dev-server --host $IP --port $PORT"
   },
   "author": "Brendobrien",
   "license": "ISC",

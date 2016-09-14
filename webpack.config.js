@@ -1,4 +1,5 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var path = require('path');
 var HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
   template: __dirname + '/app/index.html',
   filename: 'index.html',
@@ -15,7 +16,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      {test: /\.js$/, include: __dirname + '/app', loader: "babel-loader"},
+      {test: /\.js$/, include: path.join(__dirname, 'app'), loader: "babel-loader"},
       { test: /\.css$/, loader: "style-loader!css-loader" }
     ]
   },
